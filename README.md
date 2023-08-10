@@ -1,67 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Technical Test Result
+by Puteri Aulia Fahlia
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+github : https://github.com/PuteriAulia/transportationLoan.git
+Version
+php : 8.1
+framework : laravel 10.10
 
-## About Laravel
+Panduan penggunaan aplikasi:
+1. Membuat database pada database lokal dengan nama “transportation.loan”
+2. Melakukan migrasi database (ketik “php artisan migrate”)
+3. Menjalankan seeder data dengan urutan 
+    - DepartementSeeder
+    - PositionSeeder
+    - CompanyLocSeeder
+    - EmployeeSeeder
+    - TransportationSeeder
+    - UserSeeder
+4. Menjalankan aplikasi dengan ketik “php artisan serve”
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Penjelasan aplikasi
+1. Aplikasi merupakan aplikasi peminjaman kendaraan perusahaan. Proses peminjaman akan melalui tahap input oleh admin yang merupakan kepala departemen umum, lalu menunggu konfirmasi dari kepala departemen peminjam dan kepala cabang/kepala pusat.
+2. Berikut beberapa fitur yang dimiliki aplikasi
+    - Login & logout
+    - CRUD data peminjaman kendaraan
+    - CRUD service kendaraan
+    - CRUD pengusuan bahan bakar 
+3 Proses peminjaman kendaraan (proses input dan konfirmasi)
+4. Export data peminjaman kendaraan ke dalam bentuk excel sesuai dengan rentang tanggal yang diinputkan
+Pada halam dashboard terdapat total pengeluaran biaya service dan pembelian BBM, jumlah kendaraan serta grafik jumlah penggunaan kendaraan pada setiap bulannya
+Data kendaraan, data karyawan, riwayat service, riwayat pembelian BBM dan riwayat peminjaman kendaraan yang ditampilkan sesuai dengan lokasi (position) pengguna yang melakukan login. 
+Semisaml yang melakukan login adalah Joko sebagai kepala departemen umum yang berada di kantor cabang, maka data yang ditampilkan adalah aktivitas yang ada di kantor cabang
+Yang bisa melakukan penambahan data pinjaman kendaraan hanyalah kepala departemen umum (dalam data dummy aplikasi adalah Joko)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Daftar akun
+1. Admin (kepala departemen umum)
+email : joko@gmail.com
+password : kepaladepartemenumum123
+2. Kepala cabang
+email : gunawan@gmail.com
+password : kepalacabang123
+3. Kepala departemen pemasaran
+email : annisa@gmail.com
+password: kepaladepartemenpemasaran123
+Note: data akun lebih lengkap, dapat dilihat pada file UserSeeder
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-transportation-loan
+Langkah menggunakan fitur pemesanan kendaraan sesuai data dummy:
+1. Silakhan login sebagai kepala departemen umum (joko) 
+2. Melakukan input pemesanan barang dengan memilih gunawan selaku penyetuju1 dan annisa selaku kepala departemen pemasaran 
+3. Lakukan login pada akun gunawan dan annisa untuk melakukan konfirmasi
+Note: status konfirmasi pada halaman riwayat peminjaman akan berubah jika data telah di konfirmasi oleh kedua penyetuju.
+Jika sedang login sebagai admin (joko) maka anda dapat melakukan konfirmasi pengembalian kedaraan hingga status ketersediaan kedaraan dapat berubah.
