@@ -3,8 +3,9 @@ by Puteri Aulia Fahlia
 
 github : https://github.com/PuteriAulia/transportationLoan.git
 Version
-php : 8.1
-framework : laravel 10.10
+    - php : 8.1
+    - framework : laravel 10.10
+    - database: mySQL
 
 Panduan penggunaan aplikasi:
 1. Membuat database pada database lokal dengan nama “transportation.loan”
